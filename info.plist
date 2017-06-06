@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>alfred-webstorm-open</string>
+	<key>category</key>
+	<string>Productivity</string>
+	<key>connections</key>
+	<dict>
+		<key>264A09D9-DE34-403A-9524-C67F6525811D</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>7686C74A-A33F-49C2-8231-40F1569A481A</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>7686C74A-A33F-49C2-8231-40F1569A481A</key>
+		<array/>
+	</dict>
+	<key>createdby</key>
+	<string>Enso Armand</string>
+	<key>description</key>
+	<string>Open current Finder file in Webstorm</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Webstorm Open File
+Webstorm Open File
+Webstorm Open File
+Webstorm Open File
+Webstorm Open File</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>applescript</key>
+				<string>on alfred_script(q)
+  tell application "Finder"
+	set pathLoc to POSIX path of (folder of the front window as alias)
+  end tell
+	
+  tell application "Webstorm"
+	open pathLoc
+  end tell
+end alfred_script</string>
+				<key>cachescript</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.applescript</string>
+			<key>uid</key>
+			<string>7686C74A-A33F-49C2-8231-40F1569A481A</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>ws</string>
+				<key>subtext</key>
+				<string>opens currently selected Finder file in Webstorm</string>
+				<key>text</key>
+				<string>Open in Webstorm</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>264A09D9-DE34-403A-9524-C67F6525811D</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string></string>
+	<key>uidata</key>
+	<dict>
+		<key>264A09D9-DE34-403A-9524-C67F6525811D</key>
+		<dict>
+			<key>xpos</key>
+			<integer>50</integer>
+			<key>ypos</key>
+			<integer>50</integer>
+		</dict>
+		<key>7686C74A-A33F-49C2-8231-40F1569A481A</key>
+		<dict>
+			<key>xpos</key>
+			<integer>270</integer>
+			<key>ypos</key>
+			<integer>50</integer>
+		</dict>
+	</dict>
+	<key>webaddress</key>
+	<string>www.idkjs.com</string>
+</dict>
+</plist>
